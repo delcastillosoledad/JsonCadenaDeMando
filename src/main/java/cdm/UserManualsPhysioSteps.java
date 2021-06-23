@@ -11,7 +11,7 @@ public class UserManualsPhysioSteps extends CDM{
 	private static final String STEPIMAGE_FIELD_TAGNAME = "stepImage";
 	private static final String STEPTEXT_FIELD_TAGNAME = "stepText";
 	private static final String PHYREF_FIELD_TAGNAME = "physioRef";
-	private static final String FIELD_SEPARATOR = ";";
+	private static final String FIELD_SEP = ";";
 
 	public UserManualsPhysioSteps(CDM s) {
 		super(s);
@@ -51,7 +51,7 @@ public class UserManualsPhysioSteps extends CDM{
 				reader.skipValue();
 			}
 		}
-		return usmaphys_title + FIELD_SEPARATOR + usmaphys_ima + FIELD_SEPARATOR + usmaphys_text + FIELD_SEPARATOR + phisio_ref;
+		return usmaphys_title + FIELD_SEP + usmaphys_ima + FIELD_SEP + usmaphys_text + FIELD_SEP + phisio_ref;
 	}
 
 }

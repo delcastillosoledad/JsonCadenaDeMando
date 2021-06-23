@@ -12,7 +12,7 @@ public class RescueMedicinePresentations extends CDM{
 	private static final String ACTIVEINGREDIENTS_FIELD_TAGNAME = "activeIngRef";
 	private static final String INHREF_FIELD_TAGNAME = "inhalerRef";
 	private static final String DOSE_FIELD_TAGNAME = "dose";
-	private static final String FIELD_SEPARATOR = ";";
+	private static final String FIELD_SEP = ";";
 
 	public RescueMedicinePresentations(CDM s) {
 		super(s);
@@ -83,6 +83,6 @@ public class RescueMedicinePresentations extends CDM{
 				reader.skipValue();
 			}
 		}
-		return resm_ref + FIELD_SEPARATOR + resai_ref + FIELD_SEPARATOR + inh_ref + FIELD_SEPARATOR + dose;
+		return resm_ref + FIELD_SEP + resai_ref + FIELD_SEP + inh_ref + FIELD_SEP + dose;
 	}
 }

@@ -62,7 +62,6 @@ public class MedicinePresentations extends CDM {
                         inhp_ref = inhp_ref + reader.nextString() + ", ";
                     }
                     reader.endArray();
-                    // Para quitar la coma y el espacio del final
                     inhp_ref = inhp_ref.substring(0, inhp_ref.length() - 2);
                 } else {
                     inhp_ref = "ERROR";

@@ -12,7 +12,8 @@ public class GsonDatabaseClient {
 			Medicines M = new Medicines(AI);
 			MedicinePresentations MP = new MedicinePresentations(M);
 			Physiotherapies P = new Physiotherapies(MP);
-			Posologies Po = new Posologies(P);
+			Inhalers IN = new Inhalers(P);
+			Posologies Po = new Posologies(IN);
 			RescueMedicinePresentations RMP = new RescueMedicinePresentations(Po);
 			UserManualSteps UMS = new UserManualSteps(RMP);
 			UserManualsPhysioSteps UMPS = new UserManualsPhysioSteps(UMS);
