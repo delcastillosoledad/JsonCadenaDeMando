@@ -18,13 +18,8 @@ public class RescueMedicinePresentations extends CDM{
 		super(s);
 	}
 
-	// debido a que en esta parte del archivo .json tenemos los datos organizados de manera especial en forma de arrays,
-	// creamos un metodo boolean que nos identifique previamente si la etiqueta se refiere a un string normal o a un array
 	private boolean isArray(JsonReader reader) throws IOException {
 		Boolean esArray = false;
-		// el funcionamiento es simple, sabemos que un array tiene la forma: [_;...;_] 
-		// al hacer el reader.peek() comprobamos el primer elemento del campo y si coincide con '[' el metodo devolvera TRUE
-		// para saber si el primer elemento es un '[' usamos el enum JsonToken.BEGIN_ARRAY
 		if (reader.peek() == JsonToken.BEGIN_ARRAY) {
 			esArray = true;
 		}

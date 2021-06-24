@@ -9,14 +9,14 @@ public class GsonDatabaseClient {
 		try{
 			//se crea la cadena de mando:
 			ActiveIngredients AI = new ActiveIngredients(null);
-			Medicines M = new Medicines(AI);
+			Inhalers I = new Inhalers(AI);
+			Medicines M = new Medicines(I);
 			MedicinePresentations MP = new MedicinePresentations(M);
-			Physiotherapies P = new Physiotherapies(MP);
-			Inhalers IN = new Inhalers(P);
-			Posologies Po = new Posologies(IN);
-			RescueMedicinePresentations RMP = new RescueMedicinePresentations(Po);
-			UserManualSteps UMS = new UserManualSteps(RMP);
-			UserManualsPhysioSteps UMPS = new UserManualsPhysioSteps(UMS);
+			UserManualSteps UMS = new UserManualSteps(MP);
+			Posologies Po = new Posologies(UMS);
+			Physiotherapies P = new Physiotherapies(Po);
+			RescueMedicinePresentations RMP = new RescueMedicinePresentations(P);
+			UserManualsPhysioSteps UMPS = new UserManualsPhysioSteps(RMP);
 			DatabaseJSonReader DJR = new DatabaseJSonReader(UMPS);
 			try {
 				System.out.println(DJR.parse("./src/main/resources/datos.json"));
